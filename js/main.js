@@ -63,3 +63,41 @@ jQuery(document).ready(function($) {
         });
 
 });
+
+// grab booking info using fetch api
+
+//selects booking form
+const formElement = document.querySelector('form#booking') 
+
+//event occurs when  'submit' button is clicked
+formElement.addEventListener('submit', event => {
+  
+  //prevents form data from refreshing
+  event.preventDefault();
+  
+  //creats object with data from booking form
+  const formData = new FormData(formElement);
+
+  //creates JS object from booking form data
+  const data = Object.fromEntries(formData);
+   
+  //creates JSON from booking data and sends it to target destination
+  fetch('https://reqres.in/api/users', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/JSON'
+    },
+    body: JSON.stringify(data)
+  }).then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+  //console.log(data);
+});
+
+
+
+
+  
+
+
+

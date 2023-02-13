@@ -2353,6 +2353,32 @@ output {
   line-height: 1.42857143;
   color: #555;
 }
+
+/* Upload Section 
+
+.drop-zone{
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 14px;
+  font-weight: 200;
+  color:rgba(250,250,250,0.5);
+  background-color: rgba(250, 250, 250, 0.15);
+  outline: none;
+  border: none;
+  box-shadow: none;
+  line-height: 40px;
+  height: 40px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.drop-zone__input{
+  display: none;
+}
+*/
 .form-control {
   display: block;
   width: 100%;
@@ -2423,6 +2449,7 @@ input[type="search"] {
 .form-group {
   margin-bottom: 15px;
 }
+
 .radio,
 .checkbox {
   position: relative;
